@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header{
+	padding: 10px; /* Reduce padding to decrease height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cbe3d3;
+    height: 100px; /* Set a fixed height */
+    box-sizing: border-box; /* Ensures padding is included in the total height */
+}
+.header h1 {
+	color: black;
+    font-size: 3rem; 
+    font-family: 'Dancing Script', 'Brush Script MT', cursive;
+}
+.recipe-card h3{
+	color: #cbe3d3;
+}
+body {
+    background-color: #1a1a1a; /* Dark background for the body */
+    color: white; /* White text for contrast */
+    font-family: 'Dancing Script', cursive;
+}
+
+.searchBar {
+    text-align: center;
+    margin: 20px 0; /* Space around the search bar */
+}
+input[type="text"] {
+    padding: 10px;
+    width: 80%; /* Adjust width as needed */
+    max-width: 400px; /* Limit the maximum width */
+    border: 2px solid #cbe3d3; /* Green border */
+    border-radius: 5px;
+    background-color: #1a1a1a; /* Black background */
+    color: white; /* White text color */
+    font-size: 1rem; /* Adjust font size */
+    transition: border-color 0.3s; /* Smooth transition for hover effect */
+}
+
+input[type="text"]:focus {
+    outline: none; 
+    border-color: #45a049; /* Darker green border on focus */
+    background-color: #1a1a1a; /* Maintain black background on focus */
+}
+
+.recipe-grid {
+    display: flex; /* Use flexbox to align cards */
+    justify-content: center; /* Center the cards horizontally */
+    flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Space around the grid */
+}
+
+.recipe-card {
+    background-color: #2a2a2a; /* Slightly lighter shade for the cards */
+    border-radius: 10px; /* Rounded corners for the cards */
+    padding: 15px; /* Padding inside the card */
+    width: 250px; /* Fixed width for cards */
+    text-align: center; /* Center the text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.recipe-card img {
+    width: 100%; /* Make the image responsive */
+    border-radius: 10px; /* Rounded corners for the image */
+    margin-bottom: 10px; /* Space between image and text */
+}
+.recipe-card p{
+	font-family: 'Raleway', sans-serif;
+}

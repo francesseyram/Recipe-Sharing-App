@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="users.css">
+	<title>Culinary Connect</title>
+	<link rel="icon" type="image/x-icon" href="culinary_connect_logo.JPEG">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class = "container">
+		<div class = "sidebar">
+			<h2>User Management</h2>
+			<ul>
+				<li><a href = "dashboard.html">Dashboard</a></li>
+				<li><a href = "users.html">User Management</a></li>
+				<li><a href = "recipes.html">Recipe Management</a></li>
+			</ul>
+		</div>
+		<div class = "mainContent">
+			<div class = "header">
+				<img src = "cul_logo.jpg" alt ="Culinary Connect">
+			</div>
+			<h1>Current Users </h1>
+			<div class = "container">
+				
+
+				<table>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Frances Seyram</td>
+							<td>frances_seyram@gmail.com</td>
+							<td>
+								<button class = "view_button">View</button>
+								<button class = "edit_button">Edit</button>
+								<button  class = "delete_button">Delete</button>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Freda Sedem</td>
+							<td>frances_sedem@gmail.com</td>
+							<td>
+								<button class = "view_button">View</button>
+								<button class = "edit_button">Edit</button>
+								<button  class = "delete_button">Delete</button>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Caleb Arthur</td>
+							<td>caleb_arthur@gmail.com</td>
+							<td>
+								<button class = "view_button">View</button>
+								<button class = "edit_button">Edit</button>
+								<button  class = "delete_button">Delete</button>
+							</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Marvelle Ampiah</td>
+							<td>marvelle_ampiah@gmail.com</td>
+							<td>
+								<button class = "view_button">View</button>
+								<button class = "edit_button">Edit</button>
+								<button  class = "delete_button">Delete</button>
+							</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Magdalene Kpebu</td>
+							<td>magdalene_kpebu@gmail.com</td>
+							<td>
+								<button class = "view_button">View</button>
+								<button class = "edit_button">Edit</button>
+								<button  class = "delete_button">Delete</button>
+							</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>Yoofi Adams</td>
+							<td>yoofi_adams@gmail.com</td>
+							<td>
+								<button class = "view_button">View</button>
+								<button class = "edit_button">Edit</button>
+								<button  class = "delete_button">Delete</button>
+							</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>Janelle Awo</td>
+							<td>janelle_awo@gmail.com</td>
+							<td>
+								<button class = "view_button">View</button>
+								<button class = "edit_button">Edit</button>
+								<button  class = "delete_button">Delete</button>
+							</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>Nana Amoako</td>
+							<td>nana_amoako@gmail.com</td>
+							<td>
+								<button class = "view_button">View</button>
+								<button class = "edit_button">Edit</button>
+								<button  class = "delete_button">Delete</button>
+							</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>John Nolan</td>
+							<td>john_nolan@gmail.com</td>
+							<td>
+								<button class = "view_button">View</button>
+								<button class = "edit_button">Edit</button>
+								<button  class = "delete_button">Delete</button>
+							</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>Bishop Adam</td>
+							<td>bishop_adam@gmail.com</td>
+							<td>
+								<button class = "view_button">View</button>
+								<button class = "edit_button">Edit</button>
+								<button  class = "delete_button">Delete</button>
+							</td>
+						</tr>
+				</table>
+
+				<!--Modal for viewing user details -->
+				<div id = "viewUserModal" class = "modal">
+					<div class = "modalContent">
+						<span class = "close">&times;</span>
+						<h1>User Details </h1>
+						<p><strong>ID: </strong><span id="modalUserId"></span></p>
+						<p><strong>Name:</strong> <span id="modalUserName"></span></p>
+                        <p><strong>Email:</strong> <span id="modalUserEmail"></span></p>
+                    </div>
+                </div>
+
+
+				<div id = "editUserModal" class = "modal">
+					<div class = "modalContent">
+						<span class="close">&times;</span>
+						<h1>Edit User</h1>
+						<form id = "editUserForm">
+							<label for="userId">ID:</label>
+		                	<input type="text" id="userId" name="userId" readonly>
+
+		                	<label for="userName">Name:</label>
+		                	<input type="text" id="userName" name="userName" required>
+
+		                	<label for="userEmail">Email:</label>
+		                	<input type="email" id="userEmail" name="userEmail" required><br>
+
+		                	<input type = "submit" value = "Update User"><br><br>
+						</form>
+					</div>
+				</div>
+		</div>
+	</div>
+	<script src="users.js"></script>
+</body>
+</html>

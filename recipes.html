@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="recipes.css">
+	<title>Culinary Connect</title>
+	<link rel="icon" type="image/x-icon" href="culinary_connect_logo.JPEG">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class = "container">
+		<div class = "sidebar">
+			<h2>Recipe Management</h2>
+			<ul>
+				<li><a href = "dashboard.html">Dashboard</a></li>
+				<li><a href = "users.html">User Management</a></li>
+				<li><a href = "recipes.html">Recipe Management</a></li>
+			</ul>
+		</div>
+	<div class="mainContent">
+		<div class = "header">
+			<img src = "cul_logo.jpg" alt ="Culinary Connect">
+		<div class = "recipeContainer">
+
+			<h1>All Recipes</h1>
+			<button id = "addRecipeButton">Add Recipe</button>
+
+			<div id = "addRecipeModal" class = "modal">
+				<div class = "modalContent">
+					<span class = "close">&times;</span>
+					<h1>Add New Recipe</h1>
+					<form id = "addRecipeForm">
+					 	<label for="recipeTitle">Recipe Title:</label>
+                		<input type="text" id="recipeTitle" name="recipeTitle" required><br><br>
+
+                		<h2>Ingredients:</h2>
+                		<div id = "ingredientsContainer">
+                			<div class = "ingredients">
+                				<input type="text" placeholder="Origin" class="ingredientOrigin" required>
+			                    <input type="text" placeholder="Name" class="ingredientName" required>
+			                    <input type="text" placeholder="Nutritional Value" class="nutritionalValue" required>
+			                    <input type="text" placeholder="Allergen Information" class="allergenInfo" required>
+			                    <input type="text" placeholder="Shelf Life" class="shelfLife" required>
+			                    <input type="number" placeholder="Quantity" class="quantity" required min="1">
+			                    <input type="text" placeholder="Unit" class="unit" required><br>
+			                </div>
+			            </div>
+
+                		<button type="button" id = "addIngredientBtn">Add Ingredient</button><br>
+
+                		<label for = "recipeImage">Link to Recipe Image: </label>
+                		<input type="url" id = "recipeImage" name = "recipeImage" required>
+
+                		<label for = "preparationTime">Preparation Time (in minutes):</label>
+                		<input type = "number" id = "preparationTime" name = "preparationTime" required>
+                		<label for="cookingTime">Cooking Time (minutes):</label>
+			            <input type="number" id="cookingTime" name="cookingTime" required min="1">
+
+			            <label for="servingSize">Serving Size:</label>
+			            <input type="number" id="servingSize" name="servingSize" required min="1">
+
+			            <label for="foodDescription">Food Description:</label>
+			            <textarea id="foodDescription" name="foodDescription" required></textarea>
+
+			            <label for="calories">Calories per Serving:</label>
+			            <input type="number" id="calories" name="calories" required min="0">
+
+			            <label for="foodOrigin">Food Origin:</label>
+			            <input type="text" id="foodOrigin" name="foodOrigin" required>
+
+			            <label for="instructions">Instructions:</label>
+			            <textarea id="instructions" name="instructions" required></textarea>
+
+			            <input type="submit" value="Add Recipe">
+                	</form>
+            	</div>
+        	</div>
+
+      
+	    	<table id="recipeTable">
+	        	<thead>
+	            	<tr>
+	                	<th>ID</th>
+	                	<th>Title</th>
+	                	<th>Author</th>
+	                	<th>Date Created</th>
+	                	<th>Actions</th>
+	            	</tr>
+	        	</thead>
+	        	<tbody>
+	            <tr>
+	                <td>1</td>
+	                <td>Spaghetti</td>
+	                <td>Nana Amoako</td>
+	                <td>2024-10-01</td>
+	                <td>
+	                    <button class="view-btn" data-title="Spaghetti" data-author="Nana Amoako" data-date="2024-10-01">View</button>
+	                    <button class="edit-btn" data-id="1" data-title="Spaghetti" data-author="Nana Amoako" data-date="2024-10-01">Edit</button>
+	                    <button class="delete-btn">Delete</button>
+	                </td>
+	            </tr>
+
+	            <tr>
+	    			<td>2</td>
+	    			<td>Carbonara</td>
+	    			<td>Lady Magaret</td>
+	    			<td>2024-09-25</td>
+	    			<td>
+	        			<button class="view-btn" data-title="Carbonara" data-author="Lady Magaret" data-date="2024-09-25">View</button>
+	        			<button class="edit-btn" data-id="2" data-title="Carbonara" data-author="Lady Magaret" data-date="2024-09-25">Edit</button>
+	        			<button class="delete-btn">Delete</button>
+	    			</td>
+				</tr>
+
+				<tr>
+	    			<td>3</td>
+	    			<td>Grilled Salmon</td>
+	    			<td>Queen Esther</td>
+	    			<td>2024-09-30</td>
+	    			<td>
+	        			<button class="view-btn" data-title="Grilled Salmon" data-author="Queen Esther" data-date="2024-09-30">View</button>
+	        			<button class="edit-btn" data-id="3" data-title="Grilled Salmon" data-author="Queen Esther" data-date="2024-09-30">Edit</button>
+	        			<button class="delete-btn">Delete</button>
+	    			</td>
+				</tr>
+				<tr>
+	    			<td>4</td>
+	    			<td>Fried Rice</td>
+	    			<td>Peter Parker</td>
+	    			<td>2024-10-03</td>
+	    			<td>
+	        			<button class="view-btn" data-title="Fried Rice" data-author="Peter Parker" data-date="2024-10-03">View</button>
+	        			<button class="edit-btn" data-id="4" data-title="Fried Rice" data-author="Peter Parker" data-date="2024-10-03">Edit</button>
+	        			<button class="delete-btn">Delete</button>
+	    			</td>
+				</tr>
+				<tr>
+	    			<td>5</td>
+	    			<td>Yam and Kontomire</td>
+	    			<td>Janelle Awo</td>
+	    			<td>2024-09-20</td>
+	    			<td>
+	        			<button class="view-btn" data-title="Yam and Kontomire" data-author="Janelle Awo" data-date="2024-09-20">View</button>
+	        			<button class="edit-btn" data-id="5" data-title="Yam and Kontomire" data-author="Janelle Awo" data-date="2024-09-20">Edit</button>
+	        			<button class="delete-btn">Delete</button>
+	    			</td>
+				</tr>
+				<tr>
+	    			<td>6</td>
+	    			<td>Grilled Crispy Pork with Steamed Rice</td>
+	    			<td>Frances Seyram</td>
+	    			<td>2024-09-20</td>
+	    			<td>
+	        			<button class="view-btn" data-title="Grilled Crispy Pork with Steamed Rice" data-author="Frances Seyram" data-date="2024-09-20">View</button>
+	        			<button class="edit-btn" data-id="5" data-title="Grilled Crispy Pork with Steamed Rice" data-author="Frances Seyram" data-date="2024-09-20">Edit</button>
+	        			<button class="delete-btn">Delete</button>
+	    			</td>
+				</tr>
+				<tr>
+	    			<td>7</td>
+	    			<td>Steak Tacos with basil and Lemon</td>
+	    			<td>Freda Sedem</td>
+	    			<td>2024-09-20</td>
+	    			<td>
+	        			<button class="view-btn" data-title="Steak Tacos with basil and Lemon" data-author="Freda Sedem" data-date="2024-09-20">View</button>
+	        			<button class="edit-btn" data-id="5" data-title="Steak Tacos with basil and Lemon" data-author="Freda Sedem" data-date="2024-09-20">Edit</button>
+	        			<button class="delete-btn">Delete</button>
+	    			</td>
+				</tr>
+				<tr>
+	    			<td>8</td>
+	    			<td>Butter Chicken</td>
+	    			<td>Caleb Arthur</td>
+	    			<td>2024-09-20</td>
+	    			<td>
+	        			<button class="view-btn" data-title="Butter Chicken" data-author="Caleb Arthur" data-date="2024-09-20">View</button>
+	        			<button class="edit-btn" data-id="5" data-title="Butter Chicken" data-author="Caleb Arthur" data-date="2024-09-20">Edit</button>
+	        			<button class="delete-btn">Delete</button>
+	    			</td>
+				</tr>
+				<tr>
+	    			<td>9</td>
+	    			<td>Sushi Rolls</td>
+	    			<td>Marvelle Ampiah</td>
+	    			<td>2024-09-20</td>
+	    			<td>
+	        			<button class="view-btn" data-title="Sushi Rolls" data-author="Marvelle Ampiah" data-date="2024-09-20">View</button>
+	        			<button class="edit-btn" data-id="5" data-title="Sushi Rolls" data-author="Marvelle Ampiah" data-date="2024-09-20">Edit</button>
+	        			<button class="delete-btn">Delete</button>
+	    			</td>
+				</tr>
+				<tr>
+	    			<td>10</td>
+	    			<td>Jollof Rice</td>
+	    			<td>Magdalene Kpebu</td>
+	    			<td>2024-09-20</td>
+	    			<td>
+	        			<button class="view-btn" data-title="Jollof Rice" data-author="Magdalene Kpebu" data-date="2024-09-20">View</button>
+	        			<button class="edit-btn" data-id="5" data-title="Jollof Rice" data-author="Magdalene Kpebu" data-date="2024-09-20">Edit</button>
+	        			<button class="delete-btn">Delete</button>
+	    			</td>
+				</tr>
+	        </tbody>
+	    </table>
+
+	    <div id="viewModal" class="modal">
+	        <div class="modalContent">
+	            <span class="close-btn">&times;</span>
+	            <h2>Recipe Details</h2>
+	            <p><strong>Title:</strong> <span id="recipeTitle"></span></p>
+	            <p><strong>Author:</strong> <span id="recipeAuthor"></span></p>
+	            <p><strong>Date Created:</strong> <span id="recipeDate"></span></p>
+	        </div>
+	    </div>
+	     <!-- Edit Recipe Modal -->
+		<div id="editModal" class="modal">
+    		<div class="modalContent">
+		        <span class="close" onclick="closeEditModal()">&times;</span>
+		        <h2>Edit Recipe</h2>
+		        <form id="editRecipeForm" action="#" method="POST">
+		            <label for="editRecipeName">Recipe Name:</label>
+		            <input type="text" id="editRecipeName" name="recipeName" required>
+
+		            <label for="editIngredients">Ingredients:</label>
+		            <textarea id="editIngredients" name="ingredients" rows="4" required></textarea>
+
+		            <label for="editInstructions">Instructions:</label>
+		            <textarea id="editInstructions" name="instructions" rows="4" required></textarea>
+
+		            <label for="editCuisineType">Cuisine Type:</label>
+		            <select id="editCuisineType" name="cuisineType" required>
+		                <option value="Italian">Italian</option>
+		                <option value="Mexican">Mexican</option>
+		                <option value="Indian">Indian</option>
+		                <option value="Chinese">Chinese</option>
+		                <option value="American">American</option>
+		                <option value="Other">Other</option>
+		            </select>
+
+		            <label for="editDifficultyLevel">Difficulty Level:</label>
+		            <select id="editDifficultyLevel" name="difficultyLevel" required>
+		                <option value="Easy">Easy</option>
+		                <option value="Medium">Medium</option>
+		                <option value="Hard">Hard</option>
+		            </select>
+
+		            <label for="editNotes">Additional Notes:</label>
+		            <textarea id="editNotes" name="notes" rows="4"></textarea>
+
+		            <label for="editRecipeImage">Upload Image:</label>
+		            <input type="file" id="editRecipeImage" name="recipeImage" accept="image/*">
+
+		            <input type="submit" value="Update Recipe">
+		        </form>
+		    </div>
+		</div>
+
+<script>
+function closeEditModal() {
+    document.getElementById('editModal').style.display = 'none';
+}
+</script>
+
+    </div>
+</div>
+
+
+	</div>
+<script src="recipes.js"></script>
+</body>
+</html>

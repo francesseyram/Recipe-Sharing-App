@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    border: 1px solid;
+    padding: 0px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    background-color: #cbe3d3;
+}
+
+.header img {
+    width: 30%; 
+    height: auto; 
+}
+
+ 
+.main h1{
+	font-size: 3rem;
+	font-family: 'Dancing Script', 'Brush Script MT', cursive;
+
+}
+
+
+
+.main {
+    width: 100%;
+    padding: 15px;
+    overflow: hidden;
+    color: white;
+    height: 80vh;
+    position: relative;
+    margin: 0;
+}
+
+.video-background {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Hide overflow */
+    z-index: 0; /* Place video behind content */
+}
+
+.video-background video {
+    width: 100%; /* Cover the full width */
+    height: 100%; /* Cover the full height */
+    object-fit: cover; /* Ensure video covers area without distortion */
+}
+
+.toplinks {
+    position: relative; /* Position relative for stacking order */
+    z-index: 1; /* Place above video background */
+    text-align: center;
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+.toplinks a {
+    color: white; 
+    text-decoration: none; 
+    margin: 0 15px; /* Space between links */
+}
+
+.content {
+    position: relative; /* Position relative for stacking order */
+    z-index: 1; /* Place above video background */
+    text-align: center; /* Center text */
+}
+
+.content h1, .content h3 {
+    margin: 0; /* Remove default margins */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+}
+
+button {
+    padding: 15px 30px; /* Add padding to buttons */
+    background-color: rgba(0, 128, 0, 0.8); /* Semi-transparent background */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.footer {
+    text-align: center; /* Center footer text */
+    margin-top: 20px; /* Add margin for spacing */
+    background-color: #cbe3d3;
+    margin: 0;
+}
+
