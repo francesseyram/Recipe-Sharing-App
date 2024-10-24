@@ -1,4 +1,5 @@
-#Overview
+Overview
+
 The Recipe Sharing App is a simple web application that allows users to share, browse, and manage cooking recipes. Built using HTML, CSS, and JavaScript, this app provides a clean and user-friendly interface where users can view popular recipes, submit their own, and search through an expanding collection.
 
 Features
@@ -9,6 +10,7 @@ Features
 5. Local Storage Support: User-submitted recipes are stored locally, so they persist even after refreshing the page.
 
 Technologies Used
+
 HTML5: For structuring the web pages and content.
 CSS3: For styling the app and making it visually appealing.
 JavaScript (ES6): For app functionality, including form handling, dynamic content rendering, and local storage.
