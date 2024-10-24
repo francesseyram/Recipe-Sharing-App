@@ -14,5 +14,4 @@ Technologies Used
 HTML5: For structuring the web pages and content.
 
 CSS3: For styling the app and making it visually appealing.
-
 JavaScript (ES6): For app functionality, including form handling, dynamic content rendering, and local storage.
